@@ -3,8 +3,8 @@
 #
 # https://github.com/dockerfile/nodejs-bower-grunt
 #
-
 # Pull base image.
+
 FROM dockerfile/nodejs
 
 # Install Bower & Grunt
