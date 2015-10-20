@@ -8,7 +8,7 @@
 FROM node:4.2.1
 
 # Install Bower & Grunt
-RUN npm install -g bower grunt-cli sails
+RUN npm install -g bower grunt-cli sails mocha
 
 # Define working directory.
 WORKDIR /data
