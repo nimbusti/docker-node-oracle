@@ -5,7 +5,7 @@
 #
 # Pull base image.
 
-FROM node:0.10.40
+FROM node:4.2.1
 
 # Install Bower & Grunt
 RUN npm install -g bower grunt-cli sails mocha
