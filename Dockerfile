@@ -10,6 +10,7 @@ RUN apt-get update \
 
 #ADD ORACLE INSTANT CLIENT
 RUN mkdir -p opt/oracle
+ADD https://s3-sa-east-1.amazonaws.com/nimbusti/public/oracle/linux/evn-vars-linux.sh .
 ADD https://s3-sa-east-1.amazonaws.com/nimbusti/public/oracle/linux/instantclient-basic-linux.x64-12.1.0.2.0.zip .
 ADD https://s3-sa-east-1.amazonaws.com/nimbusti/public/oracle/linux/instantclient-sdk-linux.x64-12.1.0.2.0.zip .
 RUN unzip instantclient-basic-linux.x64-12.1.0.2.0.zip -d /opt/oracle
