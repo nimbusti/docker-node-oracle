@@ -25,18 +25,3 @@ ENV OCI_LIB_DIR="/opt/oracle/instantclient"
 ENV OCI_INCLUDE_DIR="/opt/oracle/instantclient/sdk/include"
 
 RUN echo '/opt/oracle/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_client.conf && ldconfig
-
-# Create app directory
-RUN mkdir -p /app/user
-WORKDIR /app/user
-
-# Install app dependencies
-COPY package.json /app/user
-RUN npm install
-
-# Bundle app source
-COPY . /app/user
-
-EXPOSE 80
-
-CMD [ "npm", "start" ]
